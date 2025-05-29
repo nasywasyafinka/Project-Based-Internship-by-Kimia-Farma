@@ -55,7 +55,7 @@ Menggunakan 4 tabel utama dari database Kimia Farma:
 - Produk psikotropika mendominasi penjualan (27%)
 - Cabang Subang memiliki transaksi tertinggi
 
-🔗 [Dashboard Lengkap](https://lookerstudio.google.com/reporting/aa849070-5d8b-4de4-a2a3-4f3519941c2a)
+🔗 [Dashboard Lengkap](https://lookerstudio.google.com/reporting/aa849070-5d8b-4de4-a2a3-4f35f9941c2a)
 
 
 ## 👩‍💻 Penulis
