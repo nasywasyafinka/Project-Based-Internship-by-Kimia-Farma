@@ -1,0 +1,44 @@
+CREATE OR REPLACE TABLE `kimia-farma-project-461309.kimia_farma.tabel_analisa` AS
+SELECT
+  tr.transaction_id,
+  tr.date AS date,  -- tidak perlu PARSE_DATE
+  tr.branch_id,
+  cb.branch_name,
+  cb.kota,
+  cb.provinsi,
+  cb.rating AS rating_cabang,
+  tr.customer_name,
+  tr.product_id,
+  pr.product_name,
+  tr.price AS actual_price,
+  tr.discount_percentage,
+
+  -- Persentase gross laba sesuai ketentuan
+  CASE
+    WHEN tr.price <= 50000 THEN 0.10
+    WHEN tr.price > 50000 AND tr.price <= 100000 THEN 0.15
+    WHEN tr.price > 100000 AND tr.price <= 300000 THEN 0.20
+    WHEN tr.price > 300000 AND tr.price <= 500000 THEN 0.25
+    ELSE 0.30
+  END AS persentase_gross_laba,
+
+  -- Nett sales = price - discount
+  tr.price * (1 - tr.discount_percentage) AS nett_sales,
+
+  -- Nett profit = nett sales * persentase laba
+  tr.price * (1 - tr.discount_percentage) *
+  CASE
+    WHEN tr.price <= 50000 THEN 0.10
+    WHEN tr.price > 50000 AND tr.price <= 100000 THEN 0.15
+    WHEN tr.price > 100000 AND tr.price <= 300000 THEN 0.20
+    WHEN tr.price > 300000 AND tr.price <= 500000 THEN 0.25
+    ELSE 0.30
+  END AS nett_profit,
+
+  tr.rating AS rating_transaksi
+
+FROM `kimia-farma-project-461309.kimia_farma.kf_final_transaction` tr
+LEFT JOIN `kimia-farma-project-461309.kimia_farma.kf_kantor_cabang` cb
+  ON tr.branch_id = cb.branch_id
+LEFT JOIN `kimia-farma-project-461309.kimia_farma.kf_product` pr
+  ON tr.product_id = pr.product_id;
