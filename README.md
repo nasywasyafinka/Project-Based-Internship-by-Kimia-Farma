@@ -5,13 +5,20 @@
 Proyek ini menganalisis data transaksi, inventaris, dan cabang **Kimia Farma** untuk mengidentifikasi tren pendapatan dan pertumbuhan bisnis periode 2020-2023.
 
 ## 🏢 Tentang Kimia Farma
-Perusahaan farmasi terintegrasi dengan jaringan 1.000+ apotek dan klinik di seluruh Indonesia, fokus pada produksi obat-obatan dan layanan kesehatan.
+Kimia Farma adalah salah satu perusahaan farmasi terbesar dan tertua di Indonesia, dengan sejarah panjang sejak didirikan pada tahun 1817 (awalnya sebagai perusahaan farmasi pertama di Hindia Belanda). Saat ini, Kimia Farma beroperasi sebagai bagian dari Holding BUMN Farmasi dan memiliki peran penting dalam menyediakan obat-obatan, produk kesehatan, serta layanan farmasi dan klinik di seluruh Indonesia. Perusahaan farmasi terintegrasi dengan jaringan 1.000+ apotek dan klinik di seluruh Indonesia, fokus pada produksi obat-obatan dan layanan kesehatan.
 
 ## 🔍 Tujuan Proyek
 1. Analisis performa penjualan per cabang
 2. Identifikasi produk unggulan
 3. Evaluasi strategi diskon
 4. Rekomendasi pengembangan bisnis
+
+## 📈 Peran Data Analytics dalam Bisnis Kimia Farma
+Dalam project ini, analisis data digunakan untuk:
+1. Memetakan Kinerja Penjualan (per cabang, produk, dan wilayah).
+2. Mengidentifikasi Produk Unggulan (contoh: obat psikotropika paling laris).
+3. Evaluasi Profitabilitas (melalui perhitungan nett profit, gross profit, dan biaya produksi).
+4. Strategi Pengembangan Pasar (misal: fokus pada daerah dengan transaksi rendah untuk ekspansi).
 
 ## 🛠️ Implementasi Teknis
 ### 1. Sumber Data
